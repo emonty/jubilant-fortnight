@@ -17,14 +17,11 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
-    "jquery": "^1.11.3",
-    "jquery-dropotron": "https://github.com/ajlkn/jquery.dropotron/archive/master.tar.gz",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-helmet": "^5.2.0",
-    "skel": "https://github.com/ajlkn/skel/archive/v3.0.1.tar.gz"
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "gatsby"

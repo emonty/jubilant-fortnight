@@ -5449,14 +5449,6 @@ jpeg-js@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.2.0.tgz#53e448ec9d263e683266467e9442d2c5a2ef5482"
 
-"jquery-dropotron@https://github.com/ajlkn/jquery.dropotron/archive/master.tar.gz":
-  version "0.0.0"
-  resolved "https://github.com/ajlkn/jquery.dropotron/archive/master.tar.gz#a5557aed0f0fdf0adca9363ddf98f2d5e172037f"
-
-jquery@^1.11.3:
-  version "1.12.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.4.tgz#01e1dfba290fe73deba77ceeacb0f9ba2fec9e0c"
-
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -9440,10 +9432,6 @@ simple-swizzle@^0.2.2:
   resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
   dependencies:
     is-arrayish "^0.3.1"
-
-"skel@https://github.com/ajlkn/skel/archive/v3.0.1.tar.gz":
-  version "3.0.1"
-  resolved "https://github.com/ajlkn/skel/archive/v3.0.1.tar.gz#fc7250be835bb30650f3c684f1072e7e57fd0a5f"
 
 slash@^1.0.0:
   version "1.0.0"
