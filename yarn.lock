@@ -3501,6 +3501,10 @@ focus-group@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/focus-group/-/focus-group-0.3.1.tgz#e0f32ed86b0dabdd6ffcebdf898ecb32e47fedce"
 
+font-awesome@^4.6.3:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+
 for-each@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.2.tgz#2c40450b9348e97f281322593ba96704b9abd4d4"
@@ -5444,6 +5448,14 @@ joi@9.0.0-0:
 jpeg-js@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.2.0.tgz#53e448ec9d263e683266467e9442d2c5a2ef5482"
+
+"jquery-dropotron@https://github.com/ajlkn/jquery.dropotron/archive/master.tar.gz":
+  version "0.0.0"
+  resolved "https://github.com/ajlkn/jquery.dropotron/archive/master.tar.gz#a5557aed0f0fdf0adca9363ddf98f2d5e172037f"
+
+jquery@^1.11.3:
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.4.tgz#01e1dfba290fe73deba77ceeacb0f9ba2fec9e0c"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"
@@ -9428,6 +9440,10 @@ simple-swizzle@^0.2.2:
   resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
   dependencies:
     is-arrayish "^0.3.1"
+
+"skel@https://github.com/ajlkn/skel/archive/v3.0.1.tar.gz":
+  version "3.0.1"
+  resolved "https://github.com/ajlkn/skel/archive/v3.0.1.tar.gz#fc7250be835bb30650f3c684f1072e7e57fd0a5f"
 
 slash@^1.0.0:
   version "1.0.0"
