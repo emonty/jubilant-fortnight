@@ -1,74 +1,104 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+      // Content must be wrapped in a container
+      <div>
+
+        {/* Banner */}
+        <section id="banner">
+          <header>
+            <h2>Cross-Project CI/CD with Ansible</h2>
+          </header>
+        </section>
+
+        {/* Highlights */}
+        <section class="wrapper style1">
+          <div class="container">
+            <div class="row 200%">
+              <section class="4u 12u(narrower)">
+                <div class="box highlight">
+                  <i class="icon major fa-gears"></i>
+                  <h3>Project Gating</h3>
+                  <p>Keep your builds evergreen by automatically merging changes only if they pass tests.</p>
+                </div>
+              </section>
+              <section class="4u 12u(narrower)">
+                <div class="box highlight">
+                  <i class="icon major fa-pencil"></i>
+                  <h3>CI/CD with Ansible</h3>
+                  <p>Use the same Ansible to deploy your system and run your tests.</p>
+                </div>
+              </section>
+              <section class="4u 12u(narrower)">
+                <div class="box highlight">
+                  <i class="icon major fa-wrench"></i>
+                  <h3>Cross-Project Dependencies</h3>
+                  <p>Easily test changes to multiple systems together before landing a single patch.</p>
+                </div>
+              </section>
+            </div>
           </div>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
-        </div>
-      </section>
+        </section>
+
+        {/* Gigantic Heading */}
+        <section class="wrapper style2">
+          <div class="container">
+            <header class="major">
+              <h2>Tested at scale</h2>
+              <p>Zuul powers some of the largest Open Source development efforts</p>
+            </header>
+          </div>
+        </section>
+
+        {/* Posts */}
+        <section class="wrapper style1">
+          <div class="container">
+            <div class="row">
+              <section class="6u 12u(narrower)">
+                <div class="box post">
+                  <a href="https://git.openstack.org/cgit/openstack-infra/zuul/tree/" class="image left"><img src="images/code.png" alt="" /></a>
+                  <div class="inner">
+                    <h3>Get the Source</h3>
+                    <p>Zuul is Free and Open Source Software.  Download the source from <a href="https://git.openstack.org/cgit/openstack-infra/zuul/tree/">git.openstack.org</a> or install it from <a href="https://pypi.python.org/pypi/zuul/">PyPI</a></p>
+                  </div>
+                </div>
+              </section>
+              <section class="6u 12u(narrower)">
+                <div class="box post">
+                  <a href="#" class="image left"><img src="images/docs.png" alt="" /></a>
+                  <div class="inner">
+                    <h3>Read the Docs</h3>
+                    <p>Zuul has extensive <a href="https://docs.openstack.org/infra/zuul/">documentation</a>.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="row">
+              <section class="6u 12u(narrower)">
+                <div class="box post">
+                  <a href="#" class="image left"><img src="images/lists.png" alt="" /></a>
+                  <div class="inner">
+                    <h3>Join the Mailing List</h3>
+                    <p>Zuul has <a href="http://lists.zuul-ci.org/cgi-bin/mailman/listinfo">mailing lists</a> for announcements and discussions.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="6u 12u(narrower)">
+                <div class="box post">
+                  <a href="#" class="image left"><img src="images/irc.png" alt="" /></a>
+                  <div class="inner">
+                    <h3>Chat on IRC</h3>
+                    <p>Join <a href="http://webchat.freenode.net/?channels=%23zuul">#zuul</a> on FreeNode</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+      </div>
     )
   }
 }
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
